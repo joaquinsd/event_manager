@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<table class="table col-6">
+  
+  <tbody>
+    <tr>
+      <td><strong>Band:</strong></td>
+      <td><%= @group.name %></td>
+    </tr>
+    <tr>
+      <td><strong>Members:</strong></td>
+      <td><%= @group.members %></td>
+    </tr>
+    <tr>
+      <td><strong>Debut Date:</strong></td>
+      <td><%= @group.debut_date %></td>
+    </tr>
+    <tr>
+      <td><strong>Group Composition:</strong></td>
+      <td><%= @group.group_type%></td>
+    </tr>
+    <tr>
+      <td><strong>Amount of Concerts</strong></td>
+      <td> <%= @group.concerts_amount %> </td>
+    </tr>
+    <tr>
+      <td><strong>Total Attendees</strong></td>
+      <td> <%= @group.total_attendance %> people </td>
+    </tr>
+    <tr>
+      <td><strong>Concerts This Month:</strong></td>
+      <td><%= @group.concerts_this_month %></td>
+    </tr>
+    <tr>
+      <td><strong>Last Concert:</strong></td>
+      <% if @group.last_concert != nil  %>
+        <td><%= @group.last_concert.strftime('%Y - %B - %A %d') %></td>
+      <%else  %>
+        <td> No ha hecho conciertos </td>
+      <%end  %>
+    </tr>
+    <tr>
+      <td><strong>Maximum Attendees</strong></td>
+      <td> <%= @group.max_attendance %> people </td>
+    </tr>
+
+    <tr>
+      <td><strong>Maximum Concert Duration</strong></td>
+      <td> <%= @group.max_duration %> minutes</td>
+    </tr>
+
+    
+
+  </tbody>
+</table>
+
+<p><%= link_to 'Back', groups_path %></p>

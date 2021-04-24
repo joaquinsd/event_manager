@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<table class="table col-4">
+  
+  <tbody>
+    <tr>
+      <td><strong>Concert Date:</strong></td>
+      <td><%= @concert.date %></td>
+    </tr>
+    <tr>
+      <td><strong>Band:</strong></td>
+      <td><%= @concert.group_name %></td>
+    </tr>
+    <tr>
+      <td><strong>Attendance:</strong></td>
+      <td><%= @concert.attendance %> people </td>
+    </tr>
+    <tr>
+      <td><strong>Duration:</strong></td>
+      <td><%= @concert.duration %> minutes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><%= link_to 'Back', concerts_path %></p>

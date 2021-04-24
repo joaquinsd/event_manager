@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-04-20
+  group: one
+
+two:
+  date: 2021-04-20
+  group: two
